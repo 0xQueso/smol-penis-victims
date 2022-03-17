@@ -84,7 +84,7 @@ export default function Verifier(projects) {
                         {(!isAVictim && account) && <Text> is not a SmolPenis victim </Text>}
 
                     <Box>
-                        {userAccount?.user && <Text> has claimed whitelist on {userAccount?.user?.project.name} </Text>}
+                        {/*{userAccount?.user && <Text> has claimed whitelist on {userAccount?.user?.project.name} </Text>}*/}
 
                         {(isAVictim && account && !userAccount?.user) && <Text> Please choose a project and claim your WL spot </Text>}
 
