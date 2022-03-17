@@ -86,7 +86,7 @@ export default function Verifier(projects) {
                         {(!isAVictim && account) && <Text> is not a SmolPenis victim </Text>}
 
                     <Box>
-                        {userAccount?.user && <Text> has claimed whitelist on {userAccount.user.project.name} </Text>}
+                        {userAccount?.user && <Text> has claimed whitelist on {userAccount?.user.project.name} </Text>}
 
                         {(isAVictim && account && !userAccount?.user) && <Text> Please choose a project and claim your WL spot </Text>}
 
@@ -98,7 +98,7 @@ export default function Verifier(projects) {
                                     <Box w={"full"} h={'150px'} bg={"whiteAlpha.900"}> </Box>
                                     <Text fontSize={"lg"} fontWeight={"semibold"} pt={2}> {p.name}</Text>
                                     <Text> {p.users.length} / {p.totalWL}</Text>
-                                    <Button mt={2} w={'80%'} colorScheme={"green"} isDisabled={!isAVictim || !account || (p.users.length >= p.totalWL) || userAccount.user} onClick={ () => {
+                                    <Button mt={2} w={'80%'} colorScheme={"green"} isDisabled={!isAVictim || !account || (p.users.length >= p.totalWL) || userAccount?.user} onClick={ () => {
                                         setChosenWl(p)
                                         onOpen()
                                     }}>Claim</Button>
