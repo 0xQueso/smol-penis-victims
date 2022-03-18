@@ -1,16 +1,22 @@
 import Head from 'next/head'
 import prisma from "../lib/prisma";
+import { Prisma } from '@prisma/client';
 import {useState} from "react";
 import Verifier from "../components/verifier";
 import {GetServerSidePropsContext, InferGetServerSidePropsType} from "next";
 
-export const getServerSideProps = async (
-    context: GetServerSidePropsContext,
-) => {
+type projectType = {
+    name?: string,
+    totalWL?: number,
+    profileImage?: string,
+    users?: any
+}
+
+export const getServerSideProps = async () => {
     const projects = await prisma.project.findMany({
         include: {
             users: {
-                select:{
+                select: {
                     address:true
                 }
             }
