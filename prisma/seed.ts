@@ -78,6 +78,11 @@ const projectsInfo: Prisma.ProjectCreateManyInput[]  = [
         name:'Smol Kevins',
         totalWL:50,
         profileImage: 'https://pbs.twimg.com/profile_images/1499839526109339650/7AN-rjxd_400x400.jpg'
+    },
+    {
+        name:'Magic Monkies',
+        totalWL: 100,
+        profileImage: 'https://pbs.twimg.com/profile_images/1496842814243676166/EBeNV2wD_400x400.jpg'
     }
 ]
 

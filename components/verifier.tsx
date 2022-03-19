@@ -124,6 +124,10 @@ export default function Verifier(projects) {
                     <AlertDialogCloseButton />
                     <AlertDialogBody>
                         Proceed with {chosenWl.name} WL?
+
+                        <Text color={"gray.500"} mt={5} fontSize={"sm"}>
+                            NOTE: You can only claim 1 WL spot per affected wallet.
+                        </Text>
                     </AlertDialogBody>
                     <AlertDialogFooter>
                         <Button ref={cancelRef} onClick={onClose}>
