@@ -61,7 +61,7 @@ const projectsInfo: Prisma.ProjectCreateManyInput[]  = [
         totalWL:50,
     },
     {
-        name:'SmolKevins',
+        name:'Smol Kevins',
         totalWL:50,
     },
     {
