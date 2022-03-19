@@ -95,7 +95,7 @@ export default function Verifier(projects) {
                             {initialProjects.projects && initialProjects.projects.map((p) => (
                                 <Flex key={p.id} p={3} w={200} flexDirection={"column"} alignItems={"center"} bg={"whiteAlpha.400"} pb={3}>
                                     {/*Project Image*/}
-                                    <Box w={"full"} h={'150px'} bg={"whiteAlpha.900"}> </Box>
+                                    <Box w={"full"}  bg={"whiteAlpha.900"}> <Image src={p.profileImage} alt={p.name}/> </Box>
                                     <Text fontSize={"lg"} fontWeight={"semibold"} pt={2}> {p.name}</Text>
                                     <Text> {p.users.length} / {p.totalWL}</Text>
                                     <Button mt={2} w={'80%'} colorScheme={"green"} isDisabled={!isAVictim || !account || (p.users.length >= p.totalWL) || userAccount?.user} onClick={ () => {
